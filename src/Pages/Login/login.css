@@ -46,7 +46,13 @@ input {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+}
+
+.signupLink {
+    color: #1877f2;
+    cursor: pointer;
+    text-decoration: none !important;
+    
 }
 
 .loginBtn {

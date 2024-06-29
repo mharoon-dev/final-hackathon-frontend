@@ -10,6 +10,7 @@ import {
 } from "../../Redux/Slices/UserSlice.jsx";
 import { json, useNavigate } from "react-router-dom";
 import SideModal from "../../Components/SideModal/SideModal.jsx";
+import { Link } from "react-router-dom";
 
 const api = axios.create({
   baseURL: URL,
@@ -76,6 +77,9 @@ const Login = () => {
               placeholder="Password"
             />
           </div>
+          <Link to="/signup" className="signupLink">
+            Don't have an account?
+          </Link>
           <button className="loginBtn" type="submit">
             Login
           </button>
