@@ -1,0 +1,71 @@
+.cardFoodPanda {
+    width: 500px;
+    /* Adjust width as per your design */
+    height: auto;
+    /* Or set a specific height */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* Add margin as per your layout */
+}
+
+.cardFoodPandaImg {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.cardFoodPandaImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardFoodPandaTitleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardFoodPandaDetails {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardFoodPandaTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+
+}
+
+.cardFoodPandaRating {
+    color: #f39c12;
+    font-size: 14px;
+}
+
+
+.cardFoodPandaCategory {
+    font-size: 14px !important;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .cardFoodPanda {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    
+}
+
