@@ -5,11 +5,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
+      external: ['module-name'], // Replace 'module-name' with the actual module name you want to externalize
       onwarn: (warning, warn) => {
-        // Ignore specific warnings
-        if (warning.code === 'THIS_IS_UNDEFINED') return;
-        
-        // Continue with default behavior
+        // Handle warnings as needed
         warn(warning);
       }
     }
