@@ -9,6 +9,14 @@
     align-items: center;
 }
 
+.newTeacherItemContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .newTeacherForm {
     display: flex;
     justify-content: center;
