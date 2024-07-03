@@ -1,9 +1,7 @@
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import PublishIcon from "@mui/icons-material/Publish";
+import BadgeIcon from "@mui/icons-material/Badge";
 import { Link } from "react-router-dom";
 import "./Student.css";
 
@@ -27,22 +25,11 @@ export default function Student() {
               />
               <div className="studentShowTopTitle">
                 <span className="studentShowstudentname">Anna Becker</span>
-                <span className="studentShowstudentTitle">
-                  Software Engineer
-                </span>
+                <span className="studentShowstudentTitle">Batch-10</span>
               </div>
             </div>
             <div className="studentShowBottom">
-              <span className="studentShowTitle">Account Details</span>
-              <div className="studentShowInfo">
-                <PermIdentityIcon className="studentShowIcon" />
-                <span className="studentShowInfoTitle">annabeck99</span>
-              </div>
-              <div className="studentShowInfo">
-                <CalendarTodayIcon className="studentShowIcon" />
-                <span className="studentShowInfoTitle">10.12.1999</span>
-              </div>
-              <span className="studentShowTitle">Contact Details</span>
+              <span className="studentShowTitle">Details</span>
               <div className="studentShowInfo">
                 <PhoneAndroidIcon className="studentShowIcon" />
                 <span className="studentShowInfoTitle">+1 123 456 67</span>
@@ -53,9 +40,9 @@ export default function Student() {
                   annabeck99@gmail.com
                 </span>
               </div>
-              <div className="studentShowInfo">
-                <LocationSearchingIcon className="studentShowIcon" />
-                <span className="studentShowInfoTitle">New York | USA</span>
+              <div className="teacherShowInfo">
+                <BadgeIcon className="teacherShowIcon" />
+                <span className="teacherShowInfoTitle">ID : 456613</span>
               </div>
             </div>
           </div>
@@ -64,7 +51,7 @@ export default function Student() {
             <form className="studentUpdateForm">
               <div className="studentUpdateLeft">
                 <div className="studentUpdateItem">
-                  <label>student name</label>
+                  <label>FullName</label>
                   <input
                     type="text"
                     placeholder="annabeck99"
@@ -72,15 +59,15 @@ export default function Student() {
                   />
                 </div>
                 <div className="studentUpdateItem">
-                  <label>Full Name</label>
+                  <label>Email</label>
                   <input
                     type="text"
-                    placeholder="Anna Becker"
+                    placeholder="annabeck99@gmail.com"
                     className="studentUpdateInput"
                   />
                 </div>
                 <div className="studentUpdateItem">
-                  <label>Email</label>
+                  <label>Father Email</label>
                   <input
                     type="text"
                     placeholder="annabeck99@gmail.com"
@@ -96,12 +83,34 @@ export default function Student() {
                   />
                 </div>
                 <div className="studentUpdateItem">
-                  <label>Address</label>
+                  <label>Course Name</label>
+                  <select name="course" className="studentUpdateSelect">
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                  </select>
+                </div>
+                <div className="studentUpdateItem">
+                  <label>Batch</label>
                   <input
-                    type="text"
-                    placeholder="New York | USA"
+                    type="number"
+                    placeholder="10"
                     className="studentUpdateInput"
                   />
+                </div>
+                <div className="studentUpdateItem">
+                  <label>Slot</label>
+                  <select name="slot" className="studentUpdateSelect">
+                    <option value="monday,wednesday,friday (6 to 9 pm)">
+                      monday,wednesday,friday (6 to 9 pm)
+                    </option>
+                    <option value="tuesday,thursday,saturday (6 to 9 pm)">
+                      tuesday,thursday,saturday (6 to 9 pm)
+                    </option>
+                    <option value="sunday (6 to 9 pm)">
+                      sunday (6 to 9 pm)
+                    </option>
+                  </select>
                 </div>
               </div>
               <div className="studentUpdateRight">

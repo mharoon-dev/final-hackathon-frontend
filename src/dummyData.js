@@ -239,3 +239,151 @@ export const studentsRows = [
     email: "raza@gmail.com",
   },
 ];
+
+export const slotsRow = [
+  {
+    sno: 1,
+    id: 1,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+
+  {
+    sno: 2,
+    id: 2,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 3,
+    id: 3,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 4,
+    id: 4,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 5,
+    id: 5,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 6,
+    id: 6,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 7,
+    id: 7,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 8,
+    id: 8,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 9,
+    id: 9,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  {
+    sno: 10,
+    id: 10,
+    batch: 10,
+    days: ["Monday", "Wednesday", "Friday"],
+    time: "6 to 9 pm",
+    teacher: "sufiyan",
+  },
+  // ... other slot objects
+];
+
+export const batchRows = [
+  {
+    totalNumber: 1,
+    id: 1,
+    sno: 1,
+    coursesName: "Web Development",
+  },
+  {
+    totalNumber: 2,
+    id: 2,
+    sno: 2,
+    coursesName: "Web Designing",
+  },
+  {
+    totalNumber: 3,
+    id: 3,
+    sno: 3,
+    coursesName: "UI/UX",
+  },
+  {
+    totalNumber: 4,
+    id: 4,
+    sno: 4,
+    coursesName: "App Development",
+  },
+  {
+    totalNumber: 5,
+    id: 5,
+    sno: 5,
+    coursesName: "UI/UX",
+  },
+  {
+    totalNumber: 6,
+    id: 6,
+    sno: 6,
+    coursesName: "Web Development",
+  },
+  {
+    totalNumber: 7,
+    id: 7,
+    sno: 7,
+    coursesName: "Teaching",
+  },
+  {
+    totalNumber: 8,
+    id: 8,
+    sno: 8,
+    coursesName: "Web Development",
+  },
+  {
+    totalNumber: 9,
+    id: 9,
+    sno: 9,
+    coursesName: "Web Development",
+  },
+  {
+    totalNumber: 10,
+    id: 10,
+    sno: 10,
+    coursesName: "Web Development",
+  },
+];

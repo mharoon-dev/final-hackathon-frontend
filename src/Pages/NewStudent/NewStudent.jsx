@@ -5,49 +5,49 @@ export default function NewStudent() {
     <div className="NewStudent">
       <h1 className="NewStudentTitle">New Student</h1>
       <form className="NewStudentForm">
-        <div className="NewStudentItem">
-          <label>studentname</label>
-          <input type="text" placeholder="john" />
-        </div>
-        <div className="NewStudentItem">
-          <label>Full Name</label>
-          <input type="text" placeholder="John Smith" />
-        </div>
-        <div className="NewStudentItem">
-          <label>Email</label>
-          <input type="email" placeholder="john@gmail.com" />
-        </div>
-        <div className="NewStudentItem">
-          <label>Password</label>
-          <input type="password" placeholder="password" />
-        </div>
-        <div className="NewStudentItem">
-          <label>Phone</label>
-          <input type="text" placeholder="+1 123 456 78" />
-        </div>
-        <div className="NewStudentItem">
-          <label>Address</label>
-          <input type="text" placeholder="New York | USA" />
-        </div>
-        <div className="NewStudentItem">
-          <label>Gender</label>
-          <div className="NewStudentGender">
-            <div className="NewStudentGenderItem">
-              <label for="male">Male</label>
-              <input type="radio" name="gender" id="male" value="male" />
-            </div>
-
-            <div className="NewStudentGenderItem">
-              <label for="female">Female</label>
-              <input type="radio" name="gender" id="female" value="female" />
-            </div>
-
-            <div className="NewStudentGenderItem">
-              <label for="other">Other</label>
-              <input type="radio" name="gender" id="other" value="other" />
-            </div>
+        <div>
+          <div className="newStudentItem">
+            <label>FullName</label>
+            <input type="text" placeholder="Muhammad Haroon" />
+          </div>
+          <div className="newStudentItem">
+            <label>Email</label>
+            <input type="email" placeholder="123@gmail.com" />
+          </div>
+          <div className="newStudentItem">
+            <label>Father Email</label>
+            <input type="email" placeholder="father@gmail.com" />
+          </div>
+          <div className="newStudentItem">
+            <label>phone Number</label>
+            <input type="text" placeholder="+1 123 456 78" />
+          </div>
+          <div className="newStudentItem">
+            <label>Course Name</label>
+            <select name="course" className="newStudentSelect">
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Graphic Design">Graphic Design</option>
+            </select>
+          </div>
+          <div className="newStudentItem">
+            <label>Batch</label>
+            <input type="number" placeholder="10" />
+          </div>
+          <div className="newStudentItem">
+            <label>Slot</label>
+            <select name="slot" className="newStudentSelect">
+              <option value="monday,wednesday,friday (6 to 9 pm )">
+                monday,wednesday,friday (6 to 9 pm )
+              </option>
+              <option value="tuesday,thursday (6 to 9 pm )">
+                tuesday,thursday (6 to 9 pm )
+              </option>
+              <option value="friday (6 to 9 pm )">friday (6 to 9 pm )</option>
+            </select>
           </div>
         </div>
+
         <button className="NewStudentButton">Create</button>
       </form>
     </div>

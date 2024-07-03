@@ -22,6 +22,12 @@ import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import Topbar from "./Components/Topbar/Topbar.jsx";
 import StudentList from "./Pages/StudentList/StudentList.jsx";
 import Student from "./Pages/Student/Student.jsx";
+import SlotsList from "./Pages/SlotsList/SlotsList.jsx";
+import Slot from "./Pages/Slot/Slot.jsx";
+import NewSlot from "./Pages/NewSlot/NewSlot.jsx";
+import BatchList from "./Pages/BatchList/BatchList.jsx";
+import NewBatch from "./Pages/NewBatch/NewBatch.jsx";
+import Batch from "./Pages/Batch/Batch.jsx";
 
 const api = axios.create({
   baseURL: URL,
@@ -77,24 +83,21 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/teachers" element={<TeacherList />} />
-          <Route path="/teacher/:teacherId" element={<Teacher />} />
+          <Route path="/students" element={<StudentList />} />
+          <Route path="/slots" element={<SlotsList />} />
+          <Route path="/batches" element={<BatchList />} />
           <Route path="/newstudent" element={<NewStudent />} />
           <Route path="/newteacher" element={<NewTeacher />} />
-          <Route path="/students" element={<StudentList />} />
+          <Route path="/newbatch" element={<NewBatch />} />
+          <Route path="/newslot" element={<NewSlot />} />
+          <Route path="/teacher/:teacherId" element={<Teacher />} />
           <Route path="/student/:studentId" element={<Student />} />
-          <Route
-            path="/"
-            element={user ? <Home /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/login"
-            element={user ? <Navigate to="/" /> : <Login />}
-          />
-          <Route
-            path="/signup"
-            element={user ? <Navigate to="/" /> : <Signup />}
-          />
-          <Route path="/otp" element={user ? <Navigate to="/" /> : <Otp />} />
+          <Route path="/slots/:slotId" element={<Slot />} />
+          <Route path="/batch/:slotId" element={<Batch />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={!user && <Login />} />
+          <Route path="/signup" element={!user && <Signup />} />
+          <Route path="/otp" element={!user && <Otp />} />
         </Routes>
       </div>
     </BrowserRouter>

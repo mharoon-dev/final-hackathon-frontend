@@ -1,33 +1,35 @@
 import "./Sidebar.css";
 import LineStyleIcon from "@mui/icons-material/LineStyle";
-import TimelineIcon from "@mui/icons-material/Timeline";
-import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
-import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
-import DynamicFeedOutlinedIcon from "@mui/icons-material/DynamicFeedOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import ReportIcon from "@mui/icons-material/Report";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import EventNoteOutlinedIcon from "@mui/icons-material/EventNoteOutlined";
+import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 const Sidebar = ({ open, toggleDrawer }) => {
+  const user = useSelector((state) => state.user.currentUser); // Spelling corrected
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const dashboard = [
     {
       name: "Home",
+      link: "/",
       iconName: <LineStyleIcon className="sidebarIcon" />,
     },
   ];
@@ -35,84 +37,89 @@ const Sidebar = ({ open, toggleDrawer }) => {
   const quickMenu = [
     {
       name: "Teacher",
+      link: "/teachers",
       iconName: <PermIdentityOutlinedIcon className="sidebarIcon" />,
     },
     {
       name: "Students",
-      iconName: <StorefrontOutlinedIcon className="sidebarIcon" />,
+      link: "/students",
+      iconName: <SchoolOutlinedIcon className="sidebarIcon" />,
+    },
+    {
+      name: "Slots",
+      link: "/slots",
+      iconName: <EventNoteOutlinedIcon className="sidebarIcon" />,
+    },
+    {
+      name: "Batches",
+      link: "/batches",
+      iconName: <LayersOutlinedIcon className="sidebarIcon" />,
     },
   ];
 
-  const notifications = [
+  const authItems = [
     {
-      name: "Mail",
-      iconName: <MailOutlineOutlinedIcon className="sidebarIcon" />,
+      name: "signup",
+      link: "/signup",
+      iconName: <PermIdentityOutlinedIcon className="sidebarIcon" />,
+    },
+    {
+      name: "login",
+      link: "/login",
+      iconName: <PermIdentityOutlinedIcon className="sidebarIcon" />,
     },
   ];
 
-  const staff = [
-    {
-      name: "Manage",
-      iconName: <WorkOutlineOutlinedIcon className="sidebarIcon" />,
-    },
-    {
-      name: "Analytics",
-      iconName: <TimelineOutlinedIcon className="sidebarIcon" />,
-    },
-    {
-      name: "Report",
-      iconName: <ReportIcon className="sidebarIcon" />,
-    },
-  ];
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {dashboard.map((obj) => (
-          <ListItem key={obj.name} disablePadding>
-            <ListItemButton>
-              {obj.iconName}
-              <ListItemText primary={obj.name} />
-            </ListItemButton>
-          </ListItem>
+          <Link
+            to={obj.link}
+            style={{ textDecoration: "none", color: "#1e1e1e" }}
+          >
+            <ListItem key={obj.name} disablePadding>
+              <ListItemButton>
+                {obj.iconName}
+                <ListItemText primary={obj.name} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
-
       <List>
         {quickMenu.map((obj) => (
-          <ListItem key={obj.name} disablePadding>
-            <ListItemButton>
-              {obj.iconName}
-              <ListItemText primary={obj.name} />
-            </ListItemButton>
-          </ListItem>
+          <Link
+            to={obj.link}
+            style={{ textDecoration: "none", color: "#1e1e1e" }}
+          >
+            <ListItem key={obj.name} disablePadding>
+              <ListItemButton>
+                {obj.iconName}
+                <ListItemText primary={obj.name} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
 
       <Divider />
-
       <List>
-        {notifications.map((obj) => (
-          <ListItem key={obj.name} disablePadding>
-            <ListItemButton>
-              {obj.iconName}
-              <ListItemText primary={obj.name} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-
-      <Divider />
-
-      <List>
-        {staff.map((obj) => (
-          <ListItem key={obj.name} disablePadding>
-            <ListItemButton>
-              {obj.iconName}
-              <ListItemText primary={obj.name} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {!user &&
+          authItems.map((obj) => (
+            <Link
+              to={obj.link}
+              style={{ textDecoration: "none", color: "#1e1e1e" }}
+            >
+              <ListItem key={obj.name} disablePadding>
+                <ListItemButton>
+                  {obj.iconName}
+                  <ListItemText primary={obj.name} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+          ))}
       </List>
     </Box>
   );
@@ -130,7 +137,11 @@ const Sidebar = ({ open, toggleDrawer }) => {
             <h3 className="sidebarTitle">Dashboard</h3>
             <ul className="sidebarList">
               <Link to="/" style={{ textDecoration: "none", color: "gray" }}>
-                <li className="sidebarListItem active">
+                <li
+                  className={`sidebarListItem ${
+                    currentPath === "/" ? "active" : ""
+                  }`}
+                >
                   <LineStyleIcon className="sidebarIcon" />
                   Home
                 </li>
@@ -145,7 +156,11 @@ const Sidebar = ({ open, toggleDrawer }) => {
                 to="/teachers"
                 style={{ textDecoration: "none", color: "gray" }}
               >
-                <li className="sidebarListItem">
+                <li
+                  className={`sidebarListItem ${
+                    currentPath === "/teachers" ? "active" : ""
+                  }`}
+                >
                   <PermIdentityOutlinedIcon className="sidebarIcon" />
                   Teacher
                 </li>
@@ -154,9 +169,39 @@ const Sidebar = ({ open, toggleDrawer }) => {
                 to="/students"
                 style={{ textDecoration: "none", color: "gray" }}
               >
-                <li className="sidebarListItem">
-                  <StorefrontOutlinedIcon className="sidebarIcon" />
+                <li
+                  className={`sidebarListItem ${
+                    currentPath === "/students" ? "active" : ""
+                  }`}
+                >
+                  <SchoolOutlinedIcon className="sidebarIcon" />
                   Students
+                </li>
+              </Link>
+              <Link
+                to="/slots"
+                style={{ textDecoration: "none", color: "gray" }}
+              >
+                <li
+                  className={`sidebarListItem ${
+                    currentPath === "/slots" ? "active" : ""
+                  }`}
+                >
+                  <EventNoteOutlinedIcon className="sidebarIcon" />
+                  Slots
+                </li>
+              </Link>
+              <Link
+                to="/batches"
+                style={{ textDecoration: "none", color: "gray" }}
+              >
+                <li
+                  className={`sidebarListItem ${
+                    currentPath === "/batches" ? "active" : ""
+                  }`}
+                >
+                  <LayersOutlinedIcon className="sidebarIcon" />
+                  Batches
                 </li>
               </Link>
             </ul>

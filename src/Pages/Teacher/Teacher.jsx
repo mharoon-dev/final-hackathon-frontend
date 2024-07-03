@@ -1,9 +1,7 @@
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import PublishIcon from "@mui/icons-material/Publish";
+import BadgeIcon from "@mui/icons-material/Badge";
 import { Link } from "react-router-dom";
 import "./teacher.css";
 
@@ -26,23 +24,14 @@ export default function Teacher() {
                 className="teacherShowImg"
               />
               <div className="teacherShowTopTitle">
-                <span className="teacherShowteachername">Anna Becker</span>
+                <span className="teacherShowteachername">Sufiyan</span>
                 <span className="teacherShowteacherTitle">
                   Software Engineer
                 </span>
               </div>
             </div>
             <div className="teacherShowBottom">
-              <span className="teacherShowTitle">Account Details</span>
-              <div className="teacherShowInfo">
-                <PermIdentityIcon className="teacherShowIcon" />
-                <span className="teacherShowInfoTitle">annabeck99</span>
-              </div>
-              <div className="teacherShowInfo">
-                <CalendarTodayIcon className="teacherShowIcon" />
-                <span className="teacherShowInfoTitle">10.12.1999</span>
-              </div>
-              <span className="teacherShowTitle">Contact Details</span>
+              <span className="teacherShowTitle">Details</span>
               <div className="teacherShowInfo">
                 <PhoneAndroidIcon className="teacherShowIcon" />
                 <span className="teacherShowInfoTitle">+1 123 456 67</span>
@@ -54,8 +43,8 @@ export default function Teacher() {
                 </span>
               </div>
               <div className="teacherShowInfo">
-                <LocationSearchingIcon className="teacherShowIcon" />
-                <span className="teacherShowInfoTitle">New York | USA</span>
+                <BadgeIcon className="teacherShowIcon" />
+                <span className="teacherShowInfoTitle">ID : 45</span>
               </div>
             </div>
           </div>
@@ -68,14 +57,6 @@ export default function Teacher() {
                   <input
                     type="text"
                     placeholder="annabeck99"
-                    className="teacherUpdateInput"
-                  />
-                </div>
-                <div className="teacherUpdateItem">
-                  <label>Full Name</label>
-                  <input
-                    type="text"
-                    placeholder="Anna Becker"
                     className="teacherUpdateInput"
                   />
                 </div>
@@ -96,12 +77,12 @@ export default function Teacher() {
                   />
                 </div>
                 <div className="teacherUpdateItem">
-                  <label>Address</label>
-                  <input
-                    type="text"
-                    placeholder="New York | USA"
-                    className="teacherUpdateInput"
-                  />
+                  <label>TeacherOf</label>
+                  <select name="course" className="teacherUpdateSelect">
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                  </select>
                 </div>
               </div>
               <div className="teacherUpdateRight">

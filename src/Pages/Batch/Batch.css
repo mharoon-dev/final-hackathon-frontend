@@ -1,15 +1,15 @@
-.teacher {
+.batch {
   flex: 4;
   padding: 20px;
 }
 
-.teacherTitleContainer {
+.batchTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.teacherAddButton {
+.batchAddButton {
   width: 80px;
   border: none;
   padding: 5px;
@@ -20,20 +20,20 @@
   font-size: 16px;
 }
 
-.teacherContainer {
+.batchContainer {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 
-.teacherShow {
+.batchShow {
   flex: 1;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
-.teacherUpdate {
+.batchUpdate {
   flex: 2;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
@@ -41,105 +41,104 @@
   margin-left: 0px;
 }
 
-.teacherShowTop {
+.batchShowTop {
   display: flex;
   align-items: center;
 }
 
-.teacherShowImg {
+.batchShowImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.teacherShowTopTitle {
+.batchShowTopTitle {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
 }
 
-.teacherShowteachername {
+.batchShowbatchname {
   font-weight: 600;
 }
 
-.teacherShowteacherTitle {
+.batchShowbatchTitle {
   font-weight: 300;
 }
 
-.teacherShowBottom {
+.batchShowBottom {
   margin-top: 20px;
 }
 
-.teacherShowTitle {
+.batchShowTitle {
   font-size: 14px;
   font-weight: 600;
   color: rgb(175, 170, 170);
 }
 
-.teacherShowInfo {
+.batchShowInfo {
   display: flex;
   align-items: center;
   margin: 20px 0px;
   color: #444;
 }
 
-.teacherShowIcon {
+.batchShowIcon {
   font-size: 16px !important;
 }
 
-.teacherShowInfoTitle {
+.batchShowInfoTitle {
   margin-left: 10px;
 }
 
-.teacherUpdateTitle {
+.batchUpdateTitle {
   font-size: 24px;
   font-weight: 600;
 }
 
-.teacherUpdateForm {
+.batchUpdateForm {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.teacherUpdateItem {
+.batchUpdateItem {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
 
-.teacherUpdateSelect {
-  height: 40px;
-  border: none;
-  border-bottom: 1px solid gray;
-  border-radius: 5px;
-}
-
-.teacherUpdateItem>label {
+.batchUpdateItem>label {
   margin-bottom: 5px;
   font-size: 14px;
 }
 
-.teacherUpdateInput {
+.batchUpdateInput {
   border: none;
+  outline: none;
   width: 250px;
   height: 30px;
   border-bottom: 1px solid gray;
 }
 
-.teacherUpdateRight {
+.batchUpdateSelect {
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.batchUpdateRight {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.teacherUpdateUpload {
+.batchUpdateUpload {
   display: flex;
   align-items: center;
 }
 
-.teacherUpdateImg {
+.batchUpdateImg {
   width: 100px;
   height: 100px;
   border-radius: 10px;
@@ -147,11 +146,11 @@
   margin-right: 20px;
 }
 
-.teacherUpdateIcon {
+.batchUpdateIcon {
   cursor: pointer;
 }
 
-.teacherUpdateButton {
+.batchUpdateButton {
   border-radius: 5px;
   border: none;
   padding: 5px;
@@ -162,33 +161,45 @@
 }
 
 
-@media (max-width: 576px) {
-  .teacher {
-    padding: 10px !important;
-  }
+@media (max-width: 768px) {
 
-  .teacherTitleContainer {
+  .batchTitleContainer,
+  .batchContainer {
     flex-direction: column;
   }
 
-  .teacherAddButton {
-    margin-top: 20px;
+  .batch {
+    padding: 0px !important;
   }
 
-  .teacherUpdate,
-  .teacherShow {
+  .batchUpdate,
+  .batchShow {
     margin-top: 20px !important;
   }
 
-  .teacherUpdateForm {
-    flex-wrap: wrap-reverse;
+  .batchAddButton {
+    margin-top: 20px;
   }
 
-  .teacherUpdateRight {
-    flex-direction: row;
+  .batchUpdateForm {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    margin-top: 20px;
+  }
+
+  .batchUpdateTitle {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .batchUpdateRight {
+    width: 100% !important;
+    margin-top: 20px;
   }
 
 

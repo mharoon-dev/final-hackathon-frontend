@@ -1,13 +1,13 @@
-import "./StudentList.css";
+import "./BatchList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { studentsRows } from "../../dummyData.js";
+import { batchRows } from "../../dummyData.js";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function StudentList() {
-  // Initialize data with studentsRows or an empty array
-  const [data, setData] = useState(studentsRows);
+export default function BatchList() {
+  // Initialize data with batchRows or an empty array
+  const [data, setData] = useState(batchRows);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -16,20 +16,16 @@ export default function StudentList() {
   const columns = [
     { field: "sno", headerName: "S.NO", width: 100 },
     {
-      field: "name",
-      headerName: "Name",
+      field: "coursesName",
+      headerName: "Course Name",
       width: 250,
-      renderCell: (params) => {
-        return (
-          <div className="studentListStudent">
-            <img className="studentListImg" src={params.row.img} alt="" />
-            {params.row.name}
-          </div>
-        );
-      },
     },
-    { field: "email", headerName: "Email", width: 200 },
-    { field: "id", headerName: "ID", width: 100 },
+    {
+      field: "totalNumber",
+      headerName: "Total Batches",
+      width: 200,
+    },
+
     {
       field: "action",
       headerName: "Action",
@@ -37,11 +33,11 @@ export default function StudentList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/student/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+            <Link to={"/batch/" + params.row.id}>
+              <button className="batchListEdit">Edit</button>
             </Link>
             <DeleteOutlineIcon
-              className="userListDelete"
+              className="batchListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
           </>
@@ -49,10 +45,8 @@ export default function StudentList() {
       },
     },
   ];
-
   return (
-
-    <div className="studentList">
+    <div className="batchList">
       <DataGrid
         rows={data}
         disableSelectionOnClick

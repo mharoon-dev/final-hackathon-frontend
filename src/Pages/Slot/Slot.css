@@ -1,15 +1,15 @@
-.teacher {
+.slot {
   flex: 4;
   padding: 20px;
 }
 
-.teacherTitleContainer {
+.slotTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.teacherAddButton {
+.slotAddButton {
   width: 80px;
   border: none;
   padding: 5px;
@@ -20,20 +20,20 @@
   font-size: 16px;
 }
 
-.teacherContainer {
+.slotContainer {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 
-.teacherShow {
+.slotShow {
   flex: 1;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
-.teacherUpdate {
+.slotUpdate {
   flex: 2;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
@@ -41,105 +41,103 @@
   margin-left: 0px;
 }
 
-.teacherShowTop {
+.slotShowTop {
   display: flex;
   align-items: center;
 }
 
-.teacherShowImg {
+.slotShowImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.teacherShowTopTitle {
+.slotShowTopTitle {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
 }
 
-.teacherShowteachername {
+.slotShowslotname {
   font-weight: 600;
 }
 
-.teacherShowteacherTitle {
+.slotShowslotTitle {
   font-weight: 300;
 }
 
-.teacherShowBottom {
+.slotShowBottom {
   margin-top: 20px;
 }
 
-.teacherShowTitle {
+.slotShowTitle {
   font-size: 14px;
   font-weight: 600;
   color: rgb(175, 170, 170);
 }
 
-.teacherShowInfo {
+.slotShowInfo {
   display: flex;
   align-items: center;
   margin: 20px 0px;
   color: #444;
 }
 
-.teacherShowIcon {
+.slotShowIcon {
   font-size: 16px !important;
 }
 
-.teacherShowInfoTitle {
+.slotShowInfoTitle {
   margin-left: 10px;
 }
 
-.teacherUpdateTitle {
+.slotUpdateTitle {
   font-size: 24px;
   font-weight: 600;
 }
 
-.teacherUpdateForm {
+.slotUpdateForm {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.teacherUpdateItem {
+.slotUpdateItem {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
 
-.teacherUpdateSelect {
-  height: 40px;
-  border: none;
-  border-bottom: 1px solid gray;
-  border-radius: 5px;
-}
-
-.teacherUpdateItem>label {
+.slotUpdateItem>label {
   margin-bottom: 5px;
   font-size: 14px;
 }
 
-.teacherUpdateInput {
+.slotUpdateSelect {
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.slotUpdateInput {
   border: none;
   width: 250px;
   height: 30px;
   border-bottom: 1px solid gray;
 }
 
-.teacherUpdateRight {
+.slotUpdateRight {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.teacherUpdateUpload {
+.slotUpdateUpload {
   display: flex;
   align-items: center;
 }
 
-.teacherUpdateImg {
+.slotUpdateImg {
   width: 100px;
   height: 100px;
   border-radius: 10px;
@@ -147,11 +145,11 @@
   margin-right: 20px;
 }
 
-.teacherUpdateIcon {
+.slotUpdateIcon {
   cursor: pointer;
 }
 
-.teacherUpdateButton {
+.slotUpdateButton {
   border-radius: 5px;
   border: none;
   padding: 5px;
@@ -162,33 +160,44 @@
 }
 
 
-@media (max-width: 576px) {
-  .teacher {
-    padding: 10px !important;
-  }
+@media (max-width: 768px) {
 
-  .teacherTitleContainer {
+  .slotTitleContainer,.slotContainer {
     flex-direction: column;
   }
 
-  .teacherAddButton {
-    margin-top: 20px;
+  .slot {
+    padding: 0px !important;
   }
 
-  .teacherUpdate,
-  .teacherShow {
+  .slotUpdate,
+  .slotShow {
     margin-top: 20px !important;
   }
 
-  .teacherUpdateForm {
-    flex-wrap: wrap-reverse;
+  .slotAddButton {
+    margin-top: 20px;
   }
 
-  .teacherUpdateRight {
-    flex-direction: row;
+  .slotUpdateForm {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    margin-top: 20px;
+  }
+
+  .slotUpdateTitle {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slotUpdateRight {
+    width: 100% !important;
+    margin-top: 20px;
   }
 
 

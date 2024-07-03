@@ -18,6 +18,14 @@ export default function NewTeacher() {
             <label>Phone</label>
             <input type="text" placeholder="+1 123 456 78" />
           </div>
+          <div className="newTeacherItem">
+            <label>TeacherOF</label>
+            <select name="course" className="newTeacherSelect">
+              <option value="Web Development">Web Development</option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Graphic Design">Graphic Design</option>
+            </select>
+          </div>
           <button className="newTeacherButton">Create</button>
         </div>
       </form>

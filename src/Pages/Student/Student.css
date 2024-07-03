@@ -33,6 +33,13 @@
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
+.studentUpdateSelect {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
 .studentUpdate {
   flex: 2;
   padding: 20px;
@@ -156,8 +163,17 @@
 
 
 @media (max-width: 576px) {
+
+  .studentTitleContainer {
+    flex-direction: column;
+  }
+
   .student {
-    padding: 10px !important;
+    padding: 0px !important;
+  }
+
+  .studentAddButton {
+    margin-top: 20px;
   }
 
   .studentUpdate,
@@ -173,8 +189,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100% !important;
   }
 
+  .studentUpdateSelect {
+    width: 100% !important;
+  }
 
 }

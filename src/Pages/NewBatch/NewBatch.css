@@ -1,82 +1,82 @@
-.NewStudent {
+.newBatch {
     flex: 4;
     margin-left: 20px;
 }
 
-.NewStudentTitle {
+.newBatchTitle {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.NewStudentForm {
+.newBatchItemContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.NewStudentItemDiv {
+.newBatchSelect {
+    height: 40px;
+    border-radius: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.newBatchForm {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.newStudentItem {
+.newBatchItem {
     width: 400px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin-top: 10px;
     margin-right: 20px;
     margin-left: 20px;
 }
 
-.newStudentItem>label {
+.newBatchItem>label {
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 600;
     color: rgb(151, 150, 150);
 }
 
-.newStudentSelect {
-    height: 40px;
-    border-radius: 5px;
-    width: 105%;
-}
-
-.newStudentItem>input {
+.newBatchItem>input {
     height: 20px;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 5px;
 }
 
-.NewStudentGender>input {
+.newBatchGender>input {
     margin-top: 15px;
 }
 
-.NewStudentGender>label {
+.newBatchGender>label {
     margin: 10px;
     font-size: 18px;
     color: #555;
 }
 
-.NewStudentGenderItem {
+.newBatchGenderItem {
     display: flex;
     align-items: center;
 
     margin-top: 10px;
 }
 
-.NewStudentSelect {
+.newBatchSelect {
     height: 40px;
+    width: 105%;
     border-radius: 5px;
     border-bottom: 1px solid gray;
 }
 
-.NewStudentButton {
+.newBatchButton {
     width: 200px;
     border: none;
     background-color: darkblue;
@@ -90,21 +90,21 @@
 
 
 @media (max-width: 768px) {
-    .newStudentItem {
+    .newBatchItem {
         width: 95% !important;
         margin-right: 0 !important;
         margin-left: 0 !important;
     }
 
-    .newStudent {
+    .newBatch {
         margin-left: 0 !important;
     }
 
-    .newStudentItem>input {
+    .newBatchItem>input {
         width: 90% !important;
     }
 
-    .newStudentSelect {
+    .newBatchSelect {
         width: 100% !important;
     }
 

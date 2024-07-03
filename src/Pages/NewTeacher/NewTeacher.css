@@ -9,8 +9,13 @@
     align-items: center;
 }
 
-.newTeacherItemContainer {
+.newTeacherSelect {
+    height: 40px;
+    border-radius: 5px;
+    width: 105%;
+}
 
+.newTeacherItemContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,6 +72,7 @@
 .newTeacherSelect {
     height: 40px;
     border-radius: 5px;
+    border-bottom: 1px solid gray;
 }
 
 .newTeacherButton {
@@ -88,11 +94,17 @@
         margin-right: 0 !important;
         margin-left: 0 !important;
     }
+
     .newTeacher {
         margin-left: 0 !important;
     }
+
     .newTeacherItem>input {
         width: 90% !important;
     }
-    
+
+    .newTeacherSelect {
+        width: 100% !important;
+    }
+
 }
