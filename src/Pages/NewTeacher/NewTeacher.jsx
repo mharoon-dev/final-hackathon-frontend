@@ -26,6 +26,7 @@ export default function NewTeacher() {
               <option value="Graphic Design">Graphic Design</option>
             </select>
           </div>
+          
           <button className="newTeacherButton">Create</button>
         </div>
       </form>

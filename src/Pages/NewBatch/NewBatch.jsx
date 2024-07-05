@@ -1,6 +1,12 @@
+import { useEffect, useState } from "react";
 import "./NewBatch.css";
 
 export default function NewBatch() {
+  const [date, setDate] = useState("");
+
+  useEffect(() => {
+    console.log(date);
+  } , [date]);
   return (
     <div className="newBatch">
       <h1 className="newBatchTitle">New Batch</h1>
@@ -21,11 +27,19 @@ export default function NewBatch() {
           </div>
           <div className="newBatchItem">
             <label>Started From</label>
-            <input type="email" placeholder="jan 2023" />
+            <input
+              onChange={(e) => setDate(e.target.value)}
+              type="date"
+              placeholder="jan 2023"
+            />
           </div>
           <div className="newBatchItem">
             <label>Duration</label>
             <input type="text" placeholder="8 months" />
+          </div>
+          <div className="newBatchItem">
+            <label>Expiration</label>
+            <input type="date" />
           </div>
           <button className="newBatchButton">Create</button>
         </div>

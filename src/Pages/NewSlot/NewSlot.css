@@ -69,6 +69,34 @@
     margin-top: 10px;
 }
 
+.newSlotItemDaysContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newSlotItemDays {
+}
+
+.newSlotItemDays>input {
+    width: 50px !important;
+    margin-bottom: 0px !important;
+    height: 20px !important;
+}
+
+
+.newSlotItemDays>label {
+    width: 20% !important;
+}
+
+.newSlotItemDays>span {
+    width: 20% !important;
+}
+
+
+
 .newSlotSelect {
     height: 40px;
     width: 105%;
@@ -106,6 +134,10 @@
 
     .newSlotSelect {
         width: 100% !important;
+    }
+
+    .newSlotItemDays {
+        display: block !important;
     }
 
 }

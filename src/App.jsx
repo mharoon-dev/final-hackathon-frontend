@@ -72,7 +72,7 @@ function App() {
     };
 
     isUserLoggedIn();
-  }, [dispatch]);
+  }, []);
 
   const signedupUser = useSelector((state) => state.SignupUserSlice.user);
   return (

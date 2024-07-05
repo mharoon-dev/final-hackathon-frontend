@@ -1,14 +1,37 @@
+import React, { useEffect, useState } from "react";
 import "./NewSlot.css";
 
 export default function NewSlot() {
+  const [selectedDays, setSelectedDays] = useState([]);
+
+  useEffect(() => {
+    console.log(selectedDays);
+  }, [selectedDays]);
+
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+
+    if (checked) {
+      setSelectedDays((prev) => [...prev, value]) 
+    } else {
+      setSelectedDays((prev) => prev.filter((day) => day !== value)) 
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aap yahan selectedDays ko console kar sakte hain ya form ke sath bhej sakte hain
+    console.log("Selected Days: ", selectedDays);
+  };
+
   return (
     <div className="newSlot">
       <h1 className="newSlotTitle">New Slot</h1>
-      <form className="newSlotForm">
+      <form className="newSlotForm" onSubmit={handleSubmit}>
         <div className="newSlotItemContainer">
           <div className="newSlotItem">
             <label>Course Name</label>
-            {/* <input type="" placeholder="Web Development" /> */}
             <select name="course" className="newSlotSelect">
               <option value="Web Development">Web Development</option>
               <option value="UI/UX">UI/UX</option>
@@ -25,18 +48,42 @@ export default function NewSlot() {
           </div>
           <div className="newSlotItem">
             <label>Days</label>
-            <input type="text" placeholder="Monday,Wednesday,Friday" />
+            <div className="newSlotItemDaysContainer">
+              {[
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ].map((day) => (
+                <div className="newSlotItemDays" key={day}>
+                  <span>{day}</span>
+                  <input
+                    type="checkbox"
+                    value={day}
+                    onChange={handleCheckboxChange}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
           <div className="newSlotItem">
             <label>Teacher-Name</label>
-            {/* <input type="text" placeholder="45" /> */}
             <select name="teacher" className="newSlotSelect">
               <option value="sufiyan">Sufiyan</option>
               <option value="saad">Saad</option>
               <option value="muhammad ali">Muhammad Ali</option>
             </select>
           </div>
-          <button className="newSlotButton">Create</button>
+          <div className="newSlotItem">
+            <label>Teacher ID</label>
+            <input type="text" placeholder="16412651" />
+          </div>
+          <button className="newSlotButton" type="submit">
+            Create
+          </button>
         </div>
       </form>
     </div>
