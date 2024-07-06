@@ -35,16 +35,8 @@ export default function NewStudent() {
             <input type="number" placeholder="10" />
           </div>
           <div className="newStudentItem">
-            <label>Slot</label>
-            <select name="slot" className="newStudentSelect">
-              <option value="monday,wednesday,friday (6 to 9 pm )">
-                monday,wednesday,friday (6 to 9 pm )
-              </option>
-              <option value="tuesday,thursday (6 to 9 pm )">
-                tuesday,thursday (6 to 9 pm )
-              </option>
-              <option value="friday (6 to 9 pm )">friday (6 to 9 pm )</option>
-            </select>
+            <label>SlotId</label>
+            <input type="text" placeholder="56115203" />
           </div>
         </div>
 

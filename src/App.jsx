@@ -71,7 +71,9 @@ function App() {
       }
     };
 
-    isUserLoggedIn();
+    setTimeout(() => {
+      isUserLoggedIn();
+    }, 2000);
   }, []);
 
   const signedupUser = useSelector((state) => state.SignupUserSlice.user);
