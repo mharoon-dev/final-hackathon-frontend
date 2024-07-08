@@ -29,9 +29,9 @@ export default function Teacher() {
     labelId="demo-simple-select-label"
     id="demo-simple-select"
   >
-    <MenuItem>Web Development</MenuItem>
-    <MenuItem>UI/UX</MenuItem>
-    <MenuItem>Graphic Design</MenuItem>
+    <MenuItem value="Web Development">Web Development</MenuItem>
+    <MenuItem value="UI/UX">UI/UX</MenuItem>
+    <MenuItem value="Graphic Design">Graphic Design</MenuItem>
   </Select>
 </FormControl>
 <br /> <br />
