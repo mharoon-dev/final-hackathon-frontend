@@ -28,6 +28,7 @@ export default function Teacher() {
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
+    label="Select Course"
   >
     <MenuItem value="Web Development">Web Development</MenuItem>
     <MenuItem value="UI/UX">UI/UX</MenuItem>
