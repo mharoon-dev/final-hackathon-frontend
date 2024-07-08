@@ -2,7 +2,11 @@
     flex: 4;
     margin-left: 20px;
 }
-
+.teacherTitleContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .newTeacherTitle {
     display: flex;
     justify-content: center;

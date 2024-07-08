@@ -5,6 +5,7 @@ import BadgeIcon from "@mui/icons-material/Badge";
 import { Link } from "react-router-dom";
 import "./teacher.css";
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { CgProfile } from "react-icons/cg";
 
 export default function Teacher() {
   return (
@@ -14,6 +15,7 @@ export default function Teacher() {
           <Link to="/teachers" style={{ textDecoration: "none", color: "black" }} >
           <Typography variant="h3">Edit Teacher</Typography>
           </Link>
+          <CgProfile size={50}/>
           </div>
           <div className="teacherContainer">
           <TextField  label="Teacher Name" id="fullWidth" placeholder="Teacher Name" type="text"/>
@@ -35,6 +37,8 @@ export default function Teacher() {
     <MenuItem value="Graphic Design">Graphic Design</MenuItem>
   </Select>
 </FormControl>
+<br /> <br />
+<TextField type="file"/>
 <br /> <br />
 <Button variant="contained">Update</Button>
           </div>

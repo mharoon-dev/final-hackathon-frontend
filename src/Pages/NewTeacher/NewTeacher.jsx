@@ -1,35 +1,44 @@
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
 import "./NewTeacher.css";
+import { Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 
 export default function NewTeacher() {
-  return (
-    <div className="newTeacher">
-      <h1 className="newTeacherTitle">New Teacher</h1>
-      <form className="newTeacherForm">
-        <div className="newTeacherItemContainer">
-          <div className="newTeacherItem">
-            <label>Teachername</label>
-            <input type="text" placeholder="john" />
+  return(
+    <>
+          <div className="teacher">
+        <div className="teacherTitleContainer">
+          <Link to="/teachers" style={{ textDecoration: "none", color: "black" }} >
+          <Typography variant="h3">Create Teacher</Typography>
+          </Link>
+          <CgProfile size={50}/>
           </div>
-          <div className="newTeacherItem">
-            <label>Email</label>
-            <input type="email" placeholder="john@gmail.com" />
+          <div className="teacherContainer">
+          <TextField  label="Teacher Name" id="fullWidth" placeholder="Teacher Name" type="text"/>
+          <br /> <br />
+          <TextField  label="Email" id="fullWidth" placeholder="Email" type="email"/>
+          <br /> <br />
+          <TextField  label="Phone" id="fullWidth" placeholder="Phone" type="number"/>
+          <br /> <br />
+          {/* select dropdown */}
+          <FormControl fullWidth>
+  <InputLabel id="demo-simple-select-label">Select Course</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    label="Select Course"
+  >
+    <MenuItem value="Web Development">Web Development</MenuItem>
+    <MenuItem value="UI/UX">UI/UX</MenuItem>
+    <MenuItem value="Graphic Design">Graphic Design</MenuItem>
+  </Select>
+</FormControl>
+<br /> <br />
+<TextField type="file"/>
+<br /> <br />
+<Button variant="contained">Create</Button>
           </div>
-          <div className="newTeacherItem">
-            <label>Phone</label>
-            <input type="text" placeholder="+1 123 456 78" />
-          </div>
-          <div className="newTeacherItem">
-            <label>TeacherOF</label>
-            <select name="course" className="newTeacherSelect">
-              <option value="Web Development">Web Development</option>
-              <option value="UI/UX">UI/UX</option>
-              <option value="Graphic Design">Graphic Design</option>
-            </select>
-          </div>
-          
-          <button className="newTeacherButton">Create</button>
         </div>
-      </form>
-    </div>
-  );
+    </>
+  )
 }
