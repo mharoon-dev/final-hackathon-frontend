@@ -3,6 +3,7 @@ import "./Topbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Button } from "@mui/material";
 
 const Topbar = ({ open, toggleDrawer }) => {
   const user = useSelector((state) => state.user.currentUser); 
@@ -20,11 +21,11 @@ const Topbar = ({ open, toggleDrawer }) => {
         <div className="topRight">
           {!user && (
             <div className="topbarIconContainer">
-              <Link to="/signup" style={{ textDecoration: "none" }}>
-                <button className="topbarButton">SIGNUP</button>
+              <Link to="/signup" className="signupButton" style={{ textDecoration: "none" }}>
+              <Button variant="contained" className="signupButton">SignUp</Button>
               </Link>
               <Link to="/login" style={{ textDecoration: "none" }}>
-                <button className="topbarButton">LOGIN</button>
+              <Button variant="contained">LogIn</Button>
               </Link>
             </div>
           )}

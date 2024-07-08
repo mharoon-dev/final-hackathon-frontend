@@ -91,6 +91,10 @@
     display: none !important;
 }
 
+.signupButton{
+    margin-right: 10px;
+}
+
 @media (max-width: 768px) {
     .topbarWrapper {
         padding: 0px 0px;
