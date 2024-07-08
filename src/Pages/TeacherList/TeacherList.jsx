@@ -4,6 +4,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { teacherRows } from "../../dummyData.js";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Button } from "@mui/material";
 
 export default function TeacherList() {
   const [data, setData] = useState(teacherRows);
@@ -44,18 +45,21 @@ export default function TeacherList() {
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      width: 300,
       renderCell: (params) => {
         return (
           <>
           <div className="TeacherListAction">
             <Link to={"/teacher/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+            <Button variant="contained" size="small">Edit</Button>
+            </Link>
+            <Link to="/newteacher">
+            <Button variant="contained" size="small">Create Teacher</Button>
             </Link>
             <DeleteOutlineIcon
+               
               className="userListDelete"
-              onClick={() => handleDelete(params.row.id)}
-            />
+              onClick={() => handleDelete(params.row.id)}/>
           </div>
           </>
         );

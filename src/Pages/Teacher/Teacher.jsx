@@ -4,105 +4,40 @@ import PublishIcon from "@mui/icons-material/Publish";
 import BadgeIcon from "@mui/icons-material/Badge";
 import { Link } from "react-router-dom";
 import "./teacher.css";
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
 
 export default function Teacher() {
   return (
     <>
-      <div className="teacher">
+          <div className="teacher">
         <div className="teacherTitleContainer">
-          <h1 className="teacherTitle">Edit teacher</h1>
-          <Link to="/newteacher">
-            <button className="teacherAddButton">Create</button>
+          <Link to="/teachers" style={{ textDecoration: "none", color: "black" }} >
+          <Typography variant="h3">Edit Teacher</Typography>
           </Link>
-        </div>
-        <div className="teacherContainer">
-          <div className="teacherShow">
-            <div className="teacherShowTop">
-              <img
-                src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                alt=""
-                className="teacherShowImg"
-              />
-              <div className="teacherShowTopTitle">
-                <span className="teacherShowteachername">Sufiyan</span>
-                <span className="teacherShowteacherTitle">
-                  Software Engineer
-                </span>
-              </div>
-            </div>
-            <div className="teacherShowBottom">
-              <span className="teacherShowTitle">Details</span>
-              <div className="teacherShowInfo">
-                <PhoneAndroidIcon className="teacherShowIcon" />
-                <span className="teacherShowInfoTitle">+1 123 456 67</span>
-              </div>
-              <div className="teacherShowInfo">
-                <MailOutlineIcon className="teacherShowIcon" />
-                <span className="teacherShowInfoTitle">
-                  annabeck99@gmail.com
-                </span>
-              </div>
-              <div className="teacherShowInfo">
-                <BadgeIcon className="teacherShowIcon" />
-                <span className="teacherShowInfoTitle">ID : 45</span>
-              </div>
-            </div>
           </div>
-          <div className="teacherUpdate">
-            <span className="teacherUpdateTitle">Edit</span>
-            <form className="teacherUpdateForm">
-              <div className="teacherUpdateLeft">
-                <div className="teacherUpdateItem">
-                  <label>teacher name</label>
-                  <input
-                    type="text"
-                    placeholder="annabeck99"
-                    className="teacherUpdateInput"
-                  />
-                </div>
-                <div className="teacherUpdateItem">
-                  <label>Email</label>
-                  <input
-                    type="text"
-                    placeholder="annabeck99@gmail.com"
-                    className="teacherUpdateInput"
-                  />
-                </div>
-                <div className="teacherUpdateItem">
-                  <label>Phone</label>
-                  <input
-                    type="text"
-                    placeholder="+1 123 456 67"
-                    className="teacherUpdateInput"
-                  />
-                </div>
-                <div className="teacherUpdateItem">
-                  <label>TeacherOf</label>
-                  <select name="course" className="teacherUpdateSelect">
-                    <option value="Web Development">Web Development</option>
-                    <option value="UI/UX">UI/UX</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                  </select>
-                </div>
-              </div>
-              <div className="teacherUpdateRight">
-                <div className="teacherUpdateUpload">
-                  <img
-                    className="teacherUpdateImg"
-                    src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    alt=""
-                  />
-                  <label htmlFor="file">
-                    <PublishIcon className="teacherUpdateIcon" />
-                  </label>
-                  <input type="file" id="file" style={{ display: "none" }} />
-                </div>
-                <button className="teacherUpdateButton">Update</button>
-              </div>
-            </form>
+          <div className="teacherContainer">
+          <TextField  label="Teacher Name" id="fullWidth" placeholder="Teacher Name" type="text"/>
+          <br /> <br />
+          <TextField  label="Email" id="fullWidth" placeholder="Email" type="email"/>
+          <br /> <br />
+          <TextField  label="Phone" id="fullWidth" placeholder="Phone" type="number"/>
+          <br /> <br />
+          {/* select dropdown */}
+          <FormControl fullWidth>
+  <InputLabel id="demo-simple-select-label">Select Course</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+  >
+    <MenuItem>Web Development</MenuItem>
+    <MenuItem>UI/UX</MenuItem>
+    <MenuItem>Graphic Design</MenuItem>
+  </Select>
+</FormControl>
+<br /> <br />
+<Button variant="contained">Update</Button>
           </div>
         </div>
-      </div>
     </>
   );
 }
