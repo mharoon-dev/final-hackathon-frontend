@@ -27,11 +27,9 @@
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 30px;
-    color: darkblue;
-    cursor: pointer;
-    margin-left: 15px;
+    display: flex;
+    height: 100px;
+    margin-top: 50px;
 }
 
 .topRight {

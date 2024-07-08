@@ -12,7 +12,9 @@ const Topbar = ({ open, toggleDrawer }) => {
       <div className="topbarWrapper">
         <div className="topLeft">
           <Link to="/" style={{ textDecoration: "none" }}>
-            <span className="logo">Attendence Portal</span>
+            <span className="logo">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngYVde_xLBtdLq1yABQw6XZSOc4ungYvPGw&s" alt="" />
+            </span>
           </Link>
         </div>
         <div className="topRight">

@@ -48,6 +48,7 @@ export default function TeacherList() {
       renderCell: (params) => {
         return (
           <>
+          <div className="TeacherListAction">
             <Link to={"/teacher/" + params.row.id}>
               <button className="userListEdit">Edit</button>
             </Link>
@@ -55,6 +56,7 @@ export default function TeacherList() {
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
+          </div>
           </>
         );
       },
