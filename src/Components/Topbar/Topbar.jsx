@@ -21,11 +21,14 @@ const Topbar = ({ open, toggleDrawer }) => {
         <div className="topRight">
           {!user && (
             <div className="topbarIconContainer">
-              <Link to="/signup" className="signupButton" style={{ textDecoration: "none" }}>
-              <Button variant="contained" className="signupButton">SignUp</Button>
+              <Link to="/signup"  style={{ textDecoration: "none" }}>
+              <Button variant="contained" color="success">SignUp</Button>
               </Link>
               <Link to="/login" style={{ textDecoration: "none" }}>
-              <Button variant="contained">LogIn</Button>
+              <Button variant="contained" color="info">LogIn</Button>
+              </Link>
+              <Link to="/login" style={{ textDecoration: "none" }}>
+              <Button variant="contained" color="error">Logout</Button>
               </Link>
             </div>
           )}
