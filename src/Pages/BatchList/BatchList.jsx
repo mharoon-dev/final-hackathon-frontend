@@ -33,6 +33,7 @@ export default function BatchList() {
       renderCell: (params) => {
         return (
           <>
+          <div className="batchListAction">
             <Link to={"/batch/" + params.row.id}>
               <button className="batchListEdit">Edit</button>
             </Link>
@@ -40,6 +41,7 @@ export default function BatchList() {
               className="batchListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
+          </div>
           </>
         );
       },

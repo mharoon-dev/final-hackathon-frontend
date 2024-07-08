@@ -41,6 +41,7 @@ export default function SlotsList() {
       renderCell: (params) => {
         return (
           <>
+          <div className="slotListAction">
             <Link to={"/slots/" + params.row.id}>
               <button className="slotListEdit">Edit</button>
             </Link>
@@ -48,6 +49,7 @@ export default function SlotsList() {
               className="slotListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
+          </div>
           </>
         );
       },

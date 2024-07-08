@@ -37,6 +37,7 @@ export default function StudentList() {
       renderCell: (params) => {
         return (
           <>
+          <div className="userListAction">
             <Link to={"/student/" + params.row.id}>
               <button className="userListEdit">Edit</button>
             </Link>
@@ -44,6 +45,7 @@ export default function StudentList() {
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
+          </div>
           </>
         );
       },
