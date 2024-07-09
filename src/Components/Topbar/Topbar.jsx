@@ -34,6 +34,14 @@ const Topbar = ({ open, toggleDrawer }) => {
                   LogIn
                 </Button>
               </Link>
+
+              <Link to="/login" style={{ textDecoration: "none" }}>
+                <Button variant="contained" color="info">
+                  LogOut
+                </Button>
+              </Link>
+
+
             </div>
           ) : (
             <>
