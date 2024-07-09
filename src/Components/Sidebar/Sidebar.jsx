@@ -33,6 +33,10 @@ const Sidebar = ({ open, toggleDrawer }) => {
   const authItems = [
     { name: "signup", link: "/signup", icon: <PermIdentityOutlinedIcon className="sidebarIcon" /> },
     { name: "login", link: "/login", icon: <PermIdentityOutlinedIcon className="sidebarIcon" /> },
+    { name: "report", link: "/report", icon: <ReportIcon className="sidebarIcon" /> },
+    { name: "admin", link: "/admin", icon: <PermIdentityOutlinedIcon className="sidebarIcon" /> },
+    { name: "logout", link: "/logout", icon: <PermIdentityOutlinedIcon className="sidebarIcon" /> },
+
   ];
 
   const DrawerList = (
