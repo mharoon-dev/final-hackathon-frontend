@@ -1,106 +1,155 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+  Grid,
+  Paper,
+  IconButton,
+} from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import PublishIcon from "@mui/icons-material/Publish";
 import BadgeIcon from "@mui/icons-material/Badge";
-import { Link } from "react-router-dom";
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
-import { CgProfile } from "react-icons/cg";
 import "./Student.css";
 
 export default function Student() {
   return (
-    <>
-      <div className="student">
-        <div className="studentTitleContainer">
-          <Typography variant="h4" className="studentTitle">Edit Student</Typography>
-          <Link to="/newstudent">
-            <Button variant="contained" color="primary" className="studentAddButton">Create</Button>
-          </Link>
-        </div>
-        <div className="studentContainer">
-          <div className="studentShow">
-            <div className="studentShowTop">
+    <Container className="student">
+      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <Typography variant="h4">Edit Student</Typography>
+        <Button component={Link} to="/newstudent" variant="contained" color="primary">
+          Create
+        </Button>
+      </Box>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={4}>
+          <Paper elevation={3} sx={{ padding: 2 }}>
+            <Box display="flex" alignItems="center">
               <img
                 src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                 alt=""
-                className="studentShowImg"
+                style={{ width: 40, height: 40, borderRadius: "50%", objectFit: "cover" }}
               />
-              <div className="studentShowTopTitle">
-                <Typography variant="h6" className="studentShowstudentname">Anna Becker</Typography>
-                <Typography variant="body2" className="studentShowstudentTitle">Batch-10</Typography>
-              </div>
-            </div>
-            <div className="studentShowBottom">
-              <Typography variant="subtitle1" className="studentShowTitle">Details</Typography>
-              <div className="studentShowInfo">
-                <PhoneAndroidIcon className="studentShowIcon" />
-                <Typography variant="body2" className="studentShowInfoTitle">+1 123 456 67</Typography>
-              </div>
-              <div className="studentShowInfo">
-                <MailOutlineIcon className="studentShowIcon" />
-                <Typography variant="body2" className="studentShowInfoTitle">annabeck99@gmail.com</Typography>
-              </div>
-              <div className="studentShowInfo">
-                <BadgeIcon className="studentShowIcon" />
-                <Typography variant="body2" className="studentShowInfoTitle">ID : 456613</Typography>
-              </div>
-            </div>
-          </div>
-          <div className="studentUpdate">
-            <Typography variant="h5" className="studentUpdateTitle">Edit</Typography>
-            <form className="studentUpdateForm">
-              <div className="studentUpdateLeft">
-                <FormControl fullWidth margin="normal">
-                  <TextField label="FullName" variant="outlined" placeholder="Anna Becker" className="studentUpdateInput" />
-                </FormControl>
-                <FormControl fullWidth margin="normal">
-                  <TextField label="Email" variant="outlined" placeholder="annabeck99@gmail.com" className="studentUpdateInput" />
-                </FormControl>
-                <FormControl fullWidth margin="normal">
-                  <TextField label="Father Email" variant="outlined" placeholder="father@gmail.com" className="studentUpdateInput" />
-                </FormControl>
-                <FormControl fullWidth margin="normal">
-                  <TextField label="Phone" variant="outlined" placeholder="+1 123 456 67" className="studentUpdateInput" />
-                </FormControl>
-                <FormControl fullWidth margin="normal">
-                  <InputLabel>Course Name</InputLabel>
-                  <Select className="studentUpdateSelect" label="Course Name">
-                    <MenuItem value="Web Development">Web Development</MenuItem>
-                    <MenuItem value="UI/UX">UI/UX</MenuItem>
-                    <MenuItem value="Graphic Design">Graphic Design</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl fullWidth margin="normal">
-                  <TextField label="Batch" variant="outlined" placeholder="10" type="number" className="studentUpdateInput" />
-                </FormControl>
-                <FormControl fullWidth margin="normal">
-                  <InputLabel>Slot</InputLabel>
-                  <Select className="studentUpdateSelect" label="Slot">
-                    <MenuItem value="monday,wednesday,friday (6 to 9 pm)">Monday, Wednesday, Friday (6 to 9 pm)</MenuItem>
-                    <MenuItem value="tuesday,thursday,saturday (6 to 9 pm)">Tuesday, Thursday, Saturday (6 to 9 pm)</MenuItem>
-                    <MenuItem value="sunday (6 to 9 pm)">Sunday (6 to 9 pm)</MenuItem>
-                  </Select>
-                </FormControl>
-              </div>
-              <div className="studentUpdateRight">
-                <div className="studentUpdateUpload">
-                  <img
-                    className="studentUpdateImg"
-                    src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    alt=""
+              <Box ml={2}>
+                <Typography variant="h6">Anna Becker</Typography>
+                <Typography variant="body2">Batch-10</Typography>
+              </Box>
+            </Box>
+            <Box mt={2}>
+              <Typography variant="subtitle1" gutterBottom>Details</Typography>
+              <Box display="flex" alignItems="center" mb={1}>
+                <PhoneAndroidIcon />
+                <Typography variant="body2" ml={1}>+1 123 456 67</Typography>
+              </Box>
+              <Box display="flex" alignItems="center" mb={1}>
+                <MailOutlineIcon />
+                <Typography variant="body2" ml={1}>annabeck99@gmail.com</Typography>
+              </Box>
+              <Box display="flex" alignItems="center">
+                <BadgeIcon />
+                <Typography variant="body2" ml={1}>ID: 456613</Typography>
+              </Box>
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Paper elevation={3} sx={{ padding: 2 }}>
+            <Typography variant="h5" gutterBottom>Edit</Typography>
+            <form>
+              <Grid container spacing={3}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    label="FullName"
+                    variant="outlined"
+                    placeholder="Anna Becker"
+                    fullWidth
+                    margin="normal"
                   />
-                  <label htmlFor="file">
-                    <PublishIcon className="studentUpdateIcon" />
-                  </label>
-                  <input type="file" id="file" style={{ display: "none" }} />
-                </div>
-                <Button variant="contained" color="primary" className="studentUpdateButton">Update</Button>
-              </div>
+                  <TextField
+                    label="Email"
+                    variant="outlined"
+                    placeholder="annabeck99@gmail.com"
+                    fullWidth
+                    margin="normal"
+                  />
+                  <TextField
+                    label="Father Email"
+                    variant="outlined"
+                    placeholder="father@gmail.com"
+                    fullWidth
+                    margin="normal"
+                  />
+                  <TextField
+                    label="Phone"
+                    variant="outlined"
+                    placeholder="+1 123 456 67"
+                    fullWidth
+                    margin="normal"
+                  />
+                  <FormControl fullWidth margin="normal" variant="outlined">
+                    <InputLabel>Course Name</InputLabel>
+                    <Select label="Course Name">
+                      <MenuItem value="Web Development">Web Development</MenuItem>
+                      <MenuItem value="UI/UX">UI/UX</MenuItem>
+                      <MenuItem value="Graphic Design">Graphic Design</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <TextField
+                    label="Batch"
+                    variant="outlined"
+                    placeholder="10"
+                    type="number"
+                    fullWidth
+                    margin="normal"
+                  />
+                  <FormControl fullWidth margin="normal" variant="outlined">
+                    <InputLabel>Slot</InputLabel>
+                    <Select label="Slot">
+                      <MenuItem value="monday,wednesday,friday (6 to 9 pm)">
+                        Monday, Wednesday, Friday (6 to 9 pm)
+                      </MenuItem>
+                      <MenuItem value="tuesday,thursday,saturday (6 to 9 pm)">
+                        Tuesday, Thursday, Saturday (6 to 9 pm)
+                      </MenuItem>
+                      <MenuItem value="sunday (6 to 9 pm)">Sunday (6 to 9 pm)</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12} sm={6} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+                  <Box display="flex" flexDirection="column" alignItems="center">
+                    <img
+                      src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      alt=""
+                      style={{ width: 100, height: 100, borderRadius: "10px", objectFit: "cover", marginBottom: 20 }}
+                    />
+                    <input
+                      accept="image/*"
+                      style={{ display: "none" }}
+                      id="file-upload"
+                      type="file"
+                    />
+                    <label htmlFor="file-upload">
+                      <IconButton component="span">
+                        <PublishIcon />
+                      </IconButton>
+                    </label>
+                  </Box>
+                  <Button variant="contained" color="primary" sx={{ mt: 2 }}>Update</Button>
+                </Grid>
+              </Grid>
             </form>
-          </div>
-        </div>
-      </div>
-    </>
+          </Paper>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
