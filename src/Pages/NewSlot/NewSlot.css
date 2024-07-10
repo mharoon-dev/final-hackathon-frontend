@@ -1,4 +1,38 @@
+/* NewSlot.css */
+
+/* Add spacing and shadow for the newSlot container */
 .newSlot {
+    padding: 20px;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  /* Align the title container items properly */
+  .newSlotTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust the form control margins for responsiveness */
+  @media (max-width: 576px) {
+    .newSlot {
+      padding: 10px !important;
+    }
+  
+    .newSlotItemContainer {
+      flex-direction: column;
+    }
+  }
+  
+  .newSlotButton {
+    margin-top: 30px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  
+
+/* .newSlot {
     flex: 4;
     margin-left: 20px;
 }
@@ -140,4 +174,4 @@
         display: block !important;
     }
 
-}
+} */
