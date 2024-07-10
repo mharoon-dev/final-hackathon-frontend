@@ -45,7 +45,7 @@ export default function TeacherList() {
     {
       field: "action",
       headerName: "Action",
-      width: 300,
+      width: 150,
       renderCell: (params) => {
         return (
           <>
@@ -53,11 +53,7 @@ export default function TeacherList() {
             <Link to={"/teacher/" + params.row.id}>
             <Button variant="contained" size="small">Edit</Button>
             </Link>
-            <Link to="/newteacher">
-            <Button variant="contained" size="small">Create Teacher</Button>
-            </Link>
             <DeleteOutlineIcon
-               
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}/>
           </div>
