@@ -1,4 +1,62 @@
 .slot {
+  padding: 20px;
+}
+
+.slotTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slotAddButton {
+  font-size: 16px;
+}
+
+.slotContainer {
+  margin-top: 20px;
+}
+
+.slotShow {
+  padding: 20px;
+}
+
+.slotUpdate {
+  padding: 20px;
+}
+
+.slotShowTop {
+  display: flex;
+  align-items: center;
+}
+
+.slotShowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+
+.slotShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #444;
+}
+
+.slotUpdateForm {
+  margin-top: 20px;
+}
+
+.slotUpdateItem {
+  margin-top: 10px;
+}
+
+.slotUpdateButton {
+  font-weight: 600;
+}
+
+
+
+/* .slot {
   flex: 4;
   padding: 20px;
 }
@@ -201,4 +259,4 @@
   }
 
 
-}
+} */

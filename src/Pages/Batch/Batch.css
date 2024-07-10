@@ -1,4 +1,55 @@
 .batch {
+  padding: 20px;
+}
+
+.batchTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.batchAddButton {
+  font-size: 16px;
+}
+
+.batchContainer {
+  margin-top: 20px;
+}
+
+.batchShow {
+  padding: 20px;
+}
+
+.batchUpdate {
+  padding: 20px;
+}
+
+.batchShowTop {
+  display: flex;
+  align-items: center;
+}
+
+.batchShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #444;
+}
+
+.batchUpdateForm {
+  margin-top: 20px;
+}
+
+.batchUpdateItem {
+  margin-top: 10px;
+}
+
+.batchUpdateButton {
+  font-weight: 600;
+}
+
+
+/* .batch {
   flex: 4;
   padding: 20px;
 }
@@ -203,4 +254,4 @@
   }
 
 
-}
+} */
