@@ -15,7 +15,7 @@ const Topbar = ({ open, toggleDrawer }) => {
           <Link to="/" style={{ textDecoration: "none" }}>
             <span className="logo">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQngYVde_xLBtdLq1yABQw6XZSOc4ungYvPGw&s"
+                src="../assets/logo.png"
                 alt=""
               />
             </span>
